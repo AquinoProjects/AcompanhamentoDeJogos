@@ -5,8 +5,6 @@
  */
 package interfacejava;
 
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author htaeaquino
@@ -29,67 +27,13 @@ public class TelaInserirJogos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panOpcoes = new javax.swing.JPanel();
-        btnVoltar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTabelaInserir = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        btnSalvarJogos = new javax.swing.JButton();
         txtJogo = new javax.swing.JTextField();
         txtPlacar = new javax.swing.JTextField();
-        btnSalvarJogos = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Inserir Jogos");
-        setLocationByPlatform(true);
-        setPreferredSize(new java.awt.Dimension(734, 517));
-
-        panOpcoes.setName(""); // NOI18N
-        panOpcoes.setPreferredSize(new java.awt.Dimension(493, 304));
-        panOpcoes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnVoltar.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
-        btnVoltar.setText("Voltar");
-        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarActionPerformed(evt);
-            }
-        });
-        panOpcoes.add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jTabelaInserir.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Jogo", "Placar"
-            }
-        ));
-        jScrollPane1.setViewportView(jTabelaInserir);
-
-        panOpcoes.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 670, 210));
-
-        jLabel1.setFont(new java.awt.Font("DejaVu Serif", 3, 24)); // NOI18N
-        jLabel1.setText("Insira seus jogos ");
-        panOpcoes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
-        jLabel2.setText("Jogo:");
-        panOpcoes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
-        jLabel3.setText("Placar:");
-        panOpcoes.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
-
-        txtJogo.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
-        panOpcoes.add(txtJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, 20));
-
-        txtPlacar.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
-        panOpcoes.add(txtPlacar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 90, 20));
 
         btnSalvarJogos.setText("Salvar jogos");
         btnSalvarJogos.addActionListener(new java.awt.event.ActionListener() {
@@ -97,44 +41,88 @@ public class TelaInserirJogos extends javax.swing.JFrame {
                 btnSalvarJogosActionPerformed(evt);
             }
         });
-        panOpcoes.add(btnSalvarJogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 130, 30));
+
+        txtJogo.setFont(new java.awt.Font("DejaVu Serif", 0, 14)); // NOI18N
+        txtJogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtJogoActionPerformed(evt);
+            }
+        });
+
+        txtPlacar.setFont(new java.awt.Font("DejaVu Serif", 0, 14)); // NOI18N
+        txtPlacar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPlacarActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("DejaVu Serif", 1, 18)); // NOI18N
+        jLabel3.setText("Placar:");
+
+        jLabel2.setFont(new java.awt.Font("DejaVu Serif", 1, 18)); // NOI18N
+        jLabel2.setText("Jogo:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panOpcoes, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPlacar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(btnSalvarJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panOpcoes, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(txtJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPlacar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnSalvarJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        // TODO add your handling code here:
-        new TelaOpcoes().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnVoltarActionPerformed
-
     private void btnSalvarJogosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarJogosActionPerformed
-        // Recuperar os dados preenchindos pelo usuario
+        // Conversao dos dados e inclusao na tabela
         int jogo = Integer.parseInt(txtJogo.getText());
         int placar = Integer.parseInt(txtPlacar.getText());
-        //Conversao da jTabelaInserir
-        DefaultTableModel tabelaJogos = 
-                (DefaultTableModel)jTabelaInserir.getModel();
         
+        TelaConsultarJogos.AddRowToTable(new Object[] {
+                        txtJogo.getText(),
+                        txtPlacar.getText(),
+                        
+        });
+        
+
     }//GEN-LAST:event_btnSalvarJogosActionPerformed
+
+    private void txtJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJogoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtJogoActionPerformed
+
+    private void txtPlacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlacarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPlacarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,13 +161,8 @@ public class TelaInserirJogos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalvarJogos;
-    private javax.swing.JButton btnVoltar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTabelaInserir;
-    private javax.swing.JPanel panOpcoes;
     private javax.swing.JTextField txtJogo;
     private javax.swing.JTextField txtPlacar;
     // End of variables declaration//GEN-END:variables
