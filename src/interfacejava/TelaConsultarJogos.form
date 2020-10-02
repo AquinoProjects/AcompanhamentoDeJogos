@@ -72,7 +72,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="406" max="32767" attributes="0"/>
+                  <EmptySpace pref="66" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -86,15 +86,15 @@
                                   <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jScrollPane2" min="-2" pref="98" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="504" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="560" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="262" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -102,18 +102,18 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="61" max="32767" attributes="0"/>
                   <Component id="btnAdicionarJogo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btnExcluir" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="190" max="-2" attributes="0"/>
-                  <EmptySpace pref="183" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -207,25 +207,25 @@
                       <Data value="10"/>
                       <Data value="24"/>
                     </Column>
-                    <Column editable="true" title="M&#xed;n. Temporada" type="java.lang.Object">
+                    <Column editable="true" title="M&#xed;n. Tem." type="java.lang.Object">
                       <Data value="12"/>
                       <Data value="12"/>
                       <Data value="10"/>
                       <Data value="10"/>
                     </Column>
-                    <Column editable="true" title="M&#xe1;x. Tempoerada" type="java.lang.Object">
+                    <Column editable="true" title="M&#xe1;x. Temp." type="java.lang.Object">
                       <Data value="12"/>
                       <Data value="24"/>
                       <Data value="24"/>
                       <Data value="24"/>
                     </Column>
-                    <Column editable="true" title="Quebra recorde m&#xed;n." type="java.lang.Object">
+                    <Column editable="true" title="Recorde m&#xed;n." type="java.lang.Object">
                       <Data value="0"/>
                       <Data value="0"/>
                       <Data value="1"/>
                       <Data value="1"/>
                     </Column>
-                    <Column editable="true" title="Quebra recorde m&#xe1;x." type="java.lang.Object">
+                    <Column editable="true" title="Recorde m&#xe1;x." type="java.lang.Object">
                       <Data value="0"/>
                       <Data value="1"/>
                       <Data value="1"/>
@@ -274,9 +274,9 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Recordes "/>
+            <Property name="text" type="java.lang.String" value="Atualizar"/>
           </Properties>
         </Component>
       </SubComponents>

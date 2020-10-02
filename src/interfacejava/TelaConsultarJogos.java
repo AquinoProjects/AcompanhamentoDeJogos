@@ -40,7 +40,7 @@ public class TelaConsultarJogos extends javax.swing.JFrame {
         btnExcluir = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         JRecordes = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
 
@@ -96,19 +96,19 @@ public class TelaConsultarJogos extends javax.swing.JFrame {
                 {"4", "24", "10", "24", "1", "1"}
             },
             new String [] {
-                "Jogo", "Placar", "Mín. Temporada", "Máx. Tempoerada", "Quebra recorde mín.", "Quebra recorde máx."
+                "Jogo", "Placar", "Mín. Tem.", "Máx. Temp.", "Recorde mín.", "Recorde máx."
             }
         ));
         jScrollPane2.setViewportView(JRecordes);
 
-        jLabel1.setText("Recordes ");
+        jButton1.setText("Atualizar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(406, Short.MAX_VALUE)
+                .addContainerGap(66, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -119,28 +119,28 @@ public class TelaConsultarJogos extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnAdicionarJogo)
                                 .addGap(146, 146, 146)))
-                        .addGap(84, 84, 84))
+                        .addGap(92, 92, 92))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(504, 504, 504))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(283, 283, 283))))
+                        .addComponent(jButton1)
+                        .addGap(262, 262, 262))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addComponent(btnAdicionarJogo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnExcluir)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(jLabel1)
-                .addGap(11, 11, 11)
+                .addGap(12, 12, 12)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -236,8 +236,8 @@ public class TelaConsultarJogos extends javax.swing.JFrame {
     private javax.swing.JTable JRecordes;
     private javax.swing.JButton btnAdicionarJogo;
     private javax.swing.JButton btnExcluir;
+    private javax.swing.JButton jButton1;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
