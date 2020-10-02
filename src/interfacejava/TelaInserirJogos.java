@@ -5,7 +5,6 @@
  */
 package interfacejava;
 
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -62,7 +61,9 @@ public class TelaInserirJogos extends javax.swing.JFrame {
 
         jTabelaInserir.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
                 "Jogo", "Placar"
@@ -70,25 +71,25 @@ public class TelaInserirJogos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTabelaInserir);
 
-        panOpcoes.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 560, 210));
+        panOpcoes.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 670, 210));
 
         jLabel1.setFont(new java.awt.Font("DejaVu Serif", 3, 24)); // NOI18N
         jLabel1.setText("Insira seus jogos ");
-        panOpcoes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
+        panOpcoes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("DejaVu Serif", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
         jLabel2.setText("Jogo:");
-        panOpcoes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+        panOpcoes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("DejaVu Serif", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
         jLabel3.setText("Placar:");
-        panOpcoes.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        panOpcoes.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
-        txtJogo.setFont(new java.awt.Font("DejaVu Serif", 0, 14)); // NOI18N
-        panOpcoes.add(txtJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, -1));
+        txtJogo.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
+        panOpcoes.add(txtJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, 20));
 
-        txtPlacar.setFont(new java.awt.Font("DejaVu Serif", 0, 14)); // NOI18N
-        panOpcoes.add(txtPlacar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 90, -1));
+        txtPlacar.setFont(new java.awt.Font("aakar", 0, 18)); // NOI18N
+        panOpcoes.add(txtPlacar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 90, 20));
 
         btnSalvarJogos.setText("Salvar jogos");
         btnSalvarJogos.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +97,7 @@ public class TelaInserirJogos extends javax.swing.JFrame {
                 btnSalvarJogosActionPerformed(evt);
             }
         });
-        panOpcoes.add(btnSalvarJogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 130, 30));
+        panOpcoes.add(btnSalvarJogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,32 +130,9 @@ public class TelaInserirJogos extends javax.swing.JFrame {
         // Recuperar os dados preenchindos pelo usuario
         int jogo = Integer.parseInt(txtJogo.getText());
         int placar = Integer.parseInt(txtPlacar.getText());
-        // Condicao para dados ja cadastrados
-        if (jogo <=4) {
-               JOptionPane.showMessageDialog(null, "Este jogo já está cadastrado!");
-               txtJogo.setText("");
-               txtPlacar.setText("");
-           
-           } else {
-        
-         //Conversao da jTabelaInserir
+        //Conversao da jTabelaInserir
         DefaultTableModel tabelaJogos = 
                 (DefaultTableModel)jTabelaInserir.getModel();
-        Object[] novoJogo = new Object[] {
-            jogo, //posicao 1 do array
-            placar // posicao 2 do array
-        }; 
-            //Adiciona uma linha na tabela para inserir novos jogos
-           tabelaJogos.addRow(novoJogo);
-           //LimparCampos
-           txtJogo.setText("");
-           txtPlacar.setText("");
-           
-           
-          
-           
-        }
-        
         
     }//GEN-LAST:event_btnSalvarJogosActionPerformed
 
