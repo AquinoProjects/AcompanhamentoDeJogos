@@ -30,14 +30,10 @@ public class TelaOpcoes extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         panOpcoes = new javax.swing.JPanel();
         lblIntro = new javax.swing.JLabel();
-        btnConsulta = new javax.swing.JButton();
-        btnRecordes = new javax.swing.JButton();
         btnInsercaoDeJogos = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jInserir = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jConsulta = new javax.swing.JMenuItem();
-        jRecordes = new javax.swing.JMenuItem();
         jSair = new javax.swing.JMenuItem();
 
         jButton2.setText("jButton2");
@@ -55,39 +51,15 @@ public class TelaOpcoes extends javax.swing.JFrame {
         lblIntro.setText("Sistema para acompanhamento de resultados");
         panOpcoes.add(lblIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 469, 41));
 
-        btnConsulta.setText("Consulta");
-        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultaActionPerformed(evt);
-            }
-        });
-        panOpcoes.add(btnConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
-
-        btnRecordes.setText("Recordes");
-        btnRecordes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRecordesActionPerformed(evt);
-            }
-        });
-        panOpcoes.add(btnRecordes, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
-
-        btnInsercaoDeJogos.setText("Inserir jogos");
+        btnInsercaoDeJogos.setText("Inserir e Consultar jogos");
         btnInsercaoDeJogos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInsercaoDeJogosActionPerformed(evt);
             }
         });
-        panOpcoes.add(btnInsercaoDeJogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 132, -1));
+        panOpcoes.add(btnInsercaoDeJogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 240, -1));
 
         jInserir.setText("Opções");
-
-        jMenuItem1.setText("Inserir jogos");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jInserir.add(jMenuItem1);
 
         jConsulta.setText("Consulta");
         jConsulta.addActionListener(new java.awt.event.ActionListener() {
@@ -96,14 +68,6 @@ public class TelaOpcoes extends javax.swing.JFrame {
             }
         });
         jInserir.add(jConsulta);
-
-        jRecordes.setText("Recordes");
-        jRecordes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRecordesActionPerformed(evt);
-            }
-        });
-        jInserir.add(jRecordes);
 
         jSair.setText("Sair");
         jSair.addActionListener(new java.awt.event.ActionListener() {
@@ -133,41 +97,17 @@ public class TelaOpcoes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
-        // TODO add your handling code here:
-        new TelaConsulta().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnConsultaActionPerformed
-
     private void btnInsercaoDeJogosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsercaoDeJogosActionPerformed
         // TODO add your handling code here:
-        new TelaInserirJogos().setVisible(true);
+        new TelaConsultarJogos().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnInsercaoDeJogosActionPerformed
 
-    private void btnRecordesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecordesActionPerformed
-        // TODO add your handling code here:
-        new TelaRecordes().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnRecordesActionPerformed
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        new TelaInserirJogos().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConsultaActionPerformed
         // TODO add your handling code here:
-        new TelaConsulta().setVisible(true);
+        new TelaConsultarJogos().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jConsultaActionPerformed
-
-    private void jRecordesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRecordesActionPerformed
-        // TODO add your handling code here:
-        new TelaRecordes().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jRecordesActionPerformed
 
     private void jSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSairActionPerformed
         // TODO add your handling code here:
@@ -211,15 +151,11 @@ public class TelaOpcoes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConsulta;
     private javax.swing.JButton btnInsercaoDeJogos;
-    private javax.swing.JButton btnRecordes;
     private javax.swing.JButton jButton2;
     private javax.swing.JMenuItem jConsulta;
     private javax.swing.JMenu jInserir;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jRecordes;
     private javax.swing.JMenuItem jSair;
     private javax.swing.JLabel lblIntro;
     private javax.swing.JPanel panOpcoes;
