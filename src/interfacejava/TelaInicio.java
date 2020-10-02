@@ -9,8 +9,10 @@ import javax.swing.JOptionPane;
 
 
 /**
- *
- * @author htaeaquino
+ *<b>TelaInicio</b> 
+ * Essa classe foi criada para dar introdução para a aplicação usando o 
+ * JFrame.
+ * 2020, Daniel A. C. de Aquino
  */
 public class TelaInicio extends javax.swing.JFrame {
 
@@ -42,6 +44,8 @@ public class TelaInicio extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setPreferredSize(new java.awt.Dimension(493, 304));
 
+        panInciar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 153), 1, true));
+        panInciar.setForeground(new java.awt.Color(102, 204, 255));
         panInciar.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         panInciar.setMinimumSize(new java.awt.Dimension(479, 95));
         panInciar.setPreferredSize(new java.awt.Dimension(479, 95));
@@ -73,7 +77,7 @@ public class TelaInicio extends javax.swing.JFrame {
             panInciarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panInciarLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(lblDigite, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                .addComponent(lblDigite, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
                 .addGap(2, 2, 2)
                 .addGroup(panInciarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panInciarLayout.createSequentialGroup()
@@ -93,18 +97,18 @@ public class TelaInicio extends javax.swing.JFrame {
                     .addComponent(txtNome))
                 .addGap(12, 12, 12)
                 .addComponent(btnInicio)
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panInciar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panInciar, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panInciar, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panInciar, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
         );
 
         pack();

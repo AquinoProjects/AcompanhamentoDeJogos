@@ -1,21 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package interfacejava;
 
 import interfacejava.TelaConsultarJogos;
+import javax.swing.JOptionPane;
 
 /**
+ *Classe criada para a atribuicao de novos jogos na JTable definida.
  *
- * @author htaeaquino
+ * 2020, Daniel A. C. de Aquino
+ * 
  */
 public class TelaInserirJogos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaInserirJogos
-     */
+    
     public TelaInserirJogos() {
         initComponents();
     }
@@ -35,9 +32,10 @@ public class TelaInserirJogos extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Novo");
 
-        btnSalvarJogos.setText("Salvar jogos");
+        btnSalvarJogos.setText("Salvar");
         btnSalvarJogos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarJogosActionPerformed(evt);
@@ -69,20 +67,19 @@ public class TelaInserirJogos extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPlacar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(btnSalvarJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txtPlacar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalvarJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,12 +102,24 @@ public class TelaInserirJogos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarJogosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarJogosActionPerformed
-        // Conversao dos dados e inclusao na tabela
+        // Conversao dos dados e inclusao dos valores na tabela.
+        int jogo = Integer.parseInt(txtJogo.getText());
+        int placar = Integer.parseInt(txtPlacar.getText());
+        if (jogo > 4) {
+            
+           
+        
+        
         TelaConsultarJogos.AddRowToTable(new Object[] {
                         txtJogo.getText(),
                         txtPlacar.getText(),
+                        });
+        }else{
+             //Condicao para o usuario nao cadastrar um jogo que já esta na tabela.
+            JOptionPane.showMessageDialog(null, "Este jogo já está cadastrado, digite outro!");
+                }
                         
-        });
+       
         
 
     }//GEN-LAST:event_btnSalvarJogosActionPerformed
