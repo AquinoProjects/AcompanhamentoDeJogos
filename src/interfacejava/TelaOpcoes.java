@@ -43,8 +43,6 @@ public class TelaOpcoes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Opções");
         setLocationByPlatform(true);
-        setMaximumSize(null);
-        setPreferredSize(new java.awt.Dimension(493, 304));
 
         panOpcoes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

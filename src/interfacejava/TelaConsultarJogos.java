@@ -5,6 +5,7 @@
  */
 package interfacejava;
 
+import interfacejava.TelaInserirJogos;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -57,8 +58,6 @@ public class TelaConsultarJogos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Consultar Jogos");
         setLocationByPlatform(true);
-        setMaximumSize(null);
-        setPreferredSize(new java.awt.Dimension(700, 800));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(606, 301));
 
