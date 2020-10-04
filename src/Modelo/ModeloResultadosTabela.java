@@ -36,9 +36,9 @@ public class ModeloResultadosTabela extends AbstractTableModel {
     public Object getValueAt(int linha, int coluna) { //Pega os resultados da tabela
         switch(coluna) { 
             case 0:
-                return dados.get(linha).getJogo();
+                return dados.get(linha).getJogo();              
             case 1:
-                return dados.get(linha).getPlacar();
+                return dados.get(linha).getPlacar();               
             case 2:
                 return dados.get(linha).getMinTemporada();
             case 3:
@@ -47,14 +47,25 @@ public class ModeloResultadosTabela extends AbstractTableModel {
                 return dados.get(linha).getQuebraRecordeMin();
             case 5:
                 return dados.get(linha).getQuebraRecordeMax();
+            
                 
             
         }
         return null;
     }
-
-    public void addRow(Object[] transfer) {
+    //adiciona os dados a jtable.
+    public void addRow(Resultados r){
+        this.dados.add(r);
+      this.fireTableDataChanged();
+    }//remocao de uma selecionada linha da tablemodel
+    public void removeRow(int linha){
+        this.dados.remove(linha);
+        this.fireTableRowsDeleted(linha, linha);
         
+    }
+    
+    {
+    //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -27,9 +27,11 @@ public class TelaOpcoes extends javax.swing.JFrame {
         panOpcoes = new javax.swing.JPanel();
         lblIntro = new javax.swing.JLabel();
         btnInsercaoDeJogos = new javax.swing.JButton();
+        btnResultados = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jInserir = new javax.swing.JMenu();
         jConsulta = new javax.swing.JMenuItem();
+        jResultados = new javax.swing.JMenuItem();
         jSair = new javax.swing.JMenuItem();
 
         jButton2.setText("jButton2");
@@ -54,15 +56,31 @@ public class TelaOpcoes extends javax.swing.JFrame {
         });
         panOpcoes.add(btnInsercaoDeJogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 240, -1));
 
+        btnResultados.setText("Inserir e Consultar Resultados");
+        btnResultados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResultadosActionPerformed(evt);
+            }
+        });
+        panOpcoes.add(btnResultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 260, -1));
+
         jInserir.setText("Opções");
 
-        jConsulta.setText("Consultar");
+        jConsulta.setText("Inserir e Consultar");
         jConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jConsultaActionPerformed(evt);
             }
         });
         jInserir.add(jConsulta);
+
+        jResultados.setText("Resultados");
+        jResultados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jResultadosActionPerformed(evt);
+            }
+        });
+        jInserir.add(jResultados);
 
         jSair.setText("Sair");
         jSair.addActionListener(new java.awt.event.ActionListener() {
@@ -112,6 +130,18 @@ public class TelaOpcoes extends javax.swing.JFrame {
     
     }//GEN-LAST:event_jSairActionPerformed
 
+    private void btnResultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultadosActionPerformed
+       //Abre o Frame determinado e fecha o atual.
+        new TelaConsultarResultados().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnResultadosActionPerformed
+
+    private void jResultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResultadosActionPerformed
+       //Abre o Frame determinado e fecha o atual.
+        new TelaConsultarResultados().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jResultadosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -149,10 +179,12 @@ public class TelaOpcoes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInsercaoDeJogos;
+    private javax.swing.JButton btnResultados;
     private javax.swing.JButton jButton2;
     private javax.swing.JMenuItem jConsulta;
     private javax.swing.JMenu jInserir;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jResultados;
     private javax.swing.JMenuItem jSair;
     private javax.swing.JLabel lblIntro;
     private javax.swing.JPanel panOpcoes;
